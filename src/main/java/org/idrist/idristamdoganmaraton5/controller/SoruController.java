@@ -3,6 +3,7 @@ package org.idrist.idristamdoganmaraton5.controller;
 import lombok.RequiredArgsConstructor;
 import org.idrist.idristamdoganmaraton5.Dto.request.SoruSaveRequestDto;
 import org.idrist.idristamdoganmaraton5.Dto.response.SoruFindAllResponseDto;
+import org.idrist.idristamdoganmaraton5.Dto.response.StatusuzSoruFindAllResponseDto;
 import org.idrist.idristamdoganmaraton5.service.SoruService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,18 @@ public class SoruController {
     public ResponseEntity<List<SoruFindAllResponseDto>> soruFindAllResponseDtos(){
         return ResponseEntity.ok(soruService.soruFindAllResponseDtos());
     }
+    @GetMapping(FINDBYID)
+    @CrossOrigin("*")
+    public ResponseEntity<SoruFindAllResponseDto> soruFindResponseDtos(Long soruId){
+        return ResponseEntity.ok(soruService.soruFindResponseDto(soruId));
+    }
+    @GetMapping(FINDALLNOSTATUS)
+    @CrossOrigin("*")
+    public ResponseEntity<List<StatusuzSoruFindAllResponseDto>> CevapsizSoruFindAllResponseDtos(){
+        return ResponseEntity.ok(soruService.CevapsizSoruFindAllResponseDtos());
+    }
+
+
 
 
 

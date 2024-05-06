@@ -4,6 +4,7 @@ import org.idrist.idristamdoganmaraton5.Dto.request.CevapSaveRequestDto;
 
 import org.idrist.idristamdoganmaraton5.Dto.response.CevapFindAllResponseDto;
 
+import org.idrist.idristamdoganmaraton5.Dto.response.StatusuzCevapFindAllResponseDto;
 import org.idrist.idristamdoganmaraton5.entity.Cevap;
 
 import org.mapstruct.Mapper;
@@ -20,4 +21,5 @@ public interface CevapMapper {
 
     CevapFindAllResponseDto cevapFindAllResponseDto(Cevap cevap);
     Cevap cevapSaveRequestDtoToCevap(CevapSaveRequestDto cevapSaveRequestDto);
+    StatusuzCevapFindAllResponseDto statusuzcevapFindAllResponseDto(Cevap cevap);
 }

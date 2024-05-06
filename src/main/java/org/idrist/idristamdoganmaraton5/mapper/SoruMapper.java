@@ -2,6 +2,7 @@ package org.idrist.idristamdoganmaraton5.mapper;
 
 import org.idrist.idristamdoganmaraton5.Dto.request.SoruSaveRequestDto;
 import org.idrist.idristamdoganmaraton5.Dto.response.SoruFindAllResponseDto;
+import org.idrist.idristamdoganmaraton5.Dto.response.StatusuzSoruFindAllResponseDto;
 import org.idrist.idristamdoganmaraton5.entity.Soru;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -15,6 +16,7 @@ public interface SoruMapper {
 
     SoruFindAllResponseDto soruFindAllResponseDto(Soru soru);
 
+    StatusuzSoruFindAllResponseDto statusuzSsoruFindAllResponseDto(Soru soru);
 
 
 }
